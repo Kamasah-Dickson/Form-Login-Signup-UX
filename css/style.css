@@ -1,0 +1,220 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  font-size: 100%;
+  background-color: #1F1D36;
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+}
+main .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 50px;
+}
+main .container .main-container {
+  border-top-left-radius: 25px;
+  overflow: hidden;
+  max-width: 50rem;
+  height: 340px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: -1px 2px 15px 0px rgba(0, 0, 0, 0.3);
+}
+main .container .main-container .img-container, main .container .main-container .form-container {
+  flex-basis: 500px;
+  max-width: 500px;
+}
+main .container .main-container .img-container {
+  height: 100%;
+  background-color: #1A1A40;
+  -webkit-animation: transform1 360ms ease;
+          animation: transform1 360ms ease;
+}
+main .container .main-container .img-container img {
+  max-width: 100%;
+  height: 100%;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+       user-select: none;
+  user-zoom: none;
+  padding: 1rem 0;
+}
+main .container .main-container .form-container {
+  display: -ms-grid;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  height: 100%;
+  background-color: hsla(0deg, 0%, 100%, 0.78);
+  -webkit-animation: transform2 360ms ease;
+          animation: transform2 360ms ease;
+}
+main .container .main-container .form-container h1 {
+  text-align: center;
+  color: #191A19;
+  font-weight: 700px;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+main .container .main-container .form-container p {
+  color: #191A19;
+  font-weight: 400;
+}
+main .container .main-container .form-container form {
+  padding-left: 3rem;
+}
+main .container .main-container .form-container form input[type=text], main .container .main-container .form-container form input[type=password], main .container .main-container .form-container form input[type=email], main .container .main-container .form-container form .btn {
+  width: 80%;
+  height: 2rem;
+  border: none;
+  outline: none;
+}
+main .container .main-container .form-container form input[type=text], main .container .main-container .form-container form input[type=password], main .container .main-container .form-container form input[type=email] {
+  padding-left: 0.5rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  background-color: #ededed;
+}
+main .container .main-container .form-container form input[type=text]:focus, main .container .main-container .form-container form input[type=password]:focus, main .container .main-container .form-container form input[type=email]:focus {
+  border: 2px solid #1A1A40;
+}
+main .container .main-container .form-container form .btn {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #fff;
+  background-color: #191A19;
+  cursor: pointer;
+  height: 2.4rem;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 1;
+}
+main .container .main-container .form-container form .btn::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #1A1A40;
+  transition: 0.2s linear;
+}
+main .container .main-container .form-container form .btn:hover::before {
+  width: 100%;
+}
+main .container .main-container .form-container form .btn:active {
+  transform: scale(1.03);
+}
+main .container .main-container .form-container form input[type=password] {
+  margin: 0.5rem 0;
+}
+main .container .main-container .form-register p {
+  padding-left: 3rem;
+}
+main .container .main-container .form-register form input[type=password] {
+  margin: 0;
+}
+main .container .main-container .form-register form input[type=email] {
+  margin: 0.5rem 0;
+}
+main .container .img-reset, main .container .img-register {
+  padding: 0 0.6rem;
+  order: 2;
+}
+main .container .register-container, main .container .reset-container {
+  display: none;
+}
+main .container .reset-container {
+  position: relative;
+}
+main .container .reset-container .close {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+}
+main .container .reset-container .close span {
+  width: 25px;
+  height: 3px;
+  background-color: #1A1A40;
+  display: block;
+}
+main .container .reset-container .close .span1 {
+  transform: translateY(8px) rotate(45deg);
+}
+main .container .reset-container .close .span2 {
+  transform: translateY(5px) rotate(-45deg);
+}
+
+@-webkit-keyframes transform1 {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes transform1 {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes transform2 {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes transform2 {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@media screen and (max-width: 375px) {
+  main .container .main-container .form-container form {
+    padding: 0 1rem;
+  }
+  main .container .main-container .form-container form input[type=password], main .container .main-container .form-container form input[type=text], main .container .main-container .form-container form input[type=email], main .container .main-container .form-container form .btn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 650px) {
+  main {
+    margin: 0 1rem;
+  }
+  main .container .main-container {
+    flex-direction: column;
+  }
+  main .container .main-container .img-container {
+    display: none;
+  }
+  main .container .main-container .form-container {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */
